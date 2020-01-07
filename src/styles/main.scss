@@ -5,3 +5,14 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+@font-face{
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Roboto Slab', serif;
+}
