@@ -34,17 +34,21 @@ a {
 	text-decoration: none;
 }
 
+p {
+	padding: 0;
+	margin: 0;
+}
+
 .wrap {
 	max-width: 1168px;
 	margin: 0 auto;
 }
-
 .page_main {
 	background: url(../img/bg-main.png) top left/cover no-repeat;
 	color: $white;
-	padding: 57px 0;
-}
+	padding: 50px 0 162px;
 
+}
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -84,30 +88,92 @@ a {
 		}
 	}
 }
-
+.block-book {
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 181px;
+}
+.block-cover {
+	width: 445px;
+	height: 639px;
+	border-radius: 5px;
+	background-image: url(../img/svg/book.svg);
+	flex: 0 0 445px;
+	margin-right: 39px;
+}
 .block-text {
 	color: $white;
 	text-align: left;
 	font-size: 18px;
+	padding: 3px 15px;
+	max-width: 585px;
+	&_author {
+		color: $battleship-grey;
+		padding-top: 18px;
+		padding-left: 0px;
+	}
 	&__name {
 		font-family: 'OpenSans', sans-serif;
-		letter-spacing: 0.9px;
+		letter-spacing: 1.3px;
+		margin: 0 0 28px 2px;
+		&_big-margin {
+			margin-bottom: 18px;
+		}
 	}
 	&__title {
 		font-size: 48px;
 		font-weight: bold;
-		letter-spacing: 1.92px;
+		letter-spacing: 1.6px;
+		margin-bottom: 11px;
 	}
 	&__subtitle {
+		letter-spacing: 1.1px;
 		color: $lightish-green;
+		margin: 0 0 41px;
 	}
-	&__text {
-		font-family: OpenSans;
+	&__description {
+		font-family: 'OpenSans', sans-serif;
 		font-size: 15px;
 		line-height: 1.6;
-		letter-spacing: 0.75px;
+		letter-spacing: 1.3px;
+		margin-bottom: 24px;
 	}
 	& > a {
-		
+		display: inline-block;
+		padding: 15px 26px;
+		border-radius: 3px;
+		box-shadow: 0px 2px 0 0 rgba(101, 228, 125, 0.5);
+		background-image: linear-gradient(to top, #65e4ce, #65e4a1), 
+						  linear-gradient(to bottom, #65e47d, #65e47d);
+		letter-spacing: 0.8px;
+		color: $white;
+		margin: 21px 0 22px;
+	}
+	& > small {
+		display: block;
+		font-family: 'OpenSans', sans-serif;
+		font-size: 12px;
+		font-style: italic;
+		letter-spacing: 0.4px;
+		margin-left: -2px;
+	}
+}
+.block-author {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 160px;
+}
+.block-ava {
+	margin-right: -2px;
+	&__gradient {
+		width: 435px;
+		height: 558px;
+		background-image: linear-gradient(to top left, #5acab1, #426384);
+		position: relative;
+	}
+	&__picture {
+		position: absolute;
+		top: 48px;
+		right: 44px;
 	}
 }
