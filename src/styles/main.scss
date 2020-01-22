@@ -24,19 +24,25 @@ $lightish-green: #65e496;
 $battleship-grey: #696980;
 $charcoal-grey: #44444f;
 $bluey-grey: #9191b5;
+$pale-grey: #f5f6fa;
 
 body {
 	font-family: 'Roboto Slab', serif;
 	font-size: 14px;
 }
-
 a {
 	text-decoration: none;
 }
-
-p {
+p, ol, li {
 	padding: 0;
 	margin: 0;
+	list-style-type: none;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 24px;
 }
 
 .wrap {
@@ -51,6 +57,9 @@ p {
 	}
 	&_author {
 		padding: 160px 0;
+	}
+	&_gray {
+		background-color: $pale-grey;
 	}
 }
 
@@ -107,21 +116,18 @@ p {
 	margin-right: 39px;
 }
 .block-text {
-	color: $white;
+	color: $charcoal-grey;
 	text-align: left;
 	font-size: 18px;
-	padding: 3px 15px;
-	max-width: 585px;
-	&_author {
-		color: $battleship-grey;
-		padding-top: 18px;
-		padding-left: 0px;
-	}
 	&__name {
+		color: $battleship-grey;
 		font-family: 'OpenSans', sans-serif;
 		letter-spacing: 1.3px;
 		margin: 0 0 28px 2px;
-		&_big-margin {
+		&_main {
+			color: $white;
+		}
+		&_author {
 			margin-bottom: 18px;
 		}
 	}
@@ -130,11 +136,24 @@ p {
 		font-weight: bold;
 		letter-spacing: 1.6px;
 		margin-bottom: 11px;
+		&_about {
+			text-align: center;
+		}
 	}
 	&__subtitle {
 		letter-spacing: 1.1px;
 		color: $lightish-green;
 		margin: 0 0 41px;
+		&_about {
+			text-align: center;
+			margin-bottom: 84px;
+		}
+	}
+	&__paragraph-title {
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: $charcoal-grey;
+		margin-bottom: 20px;
 	}
 	&__description {
 		font-family: 'OpenSans', sans-serif;
@@ -142,10 +161,14 @@ p {
 		line-height: 1.6;
 		letter-spacing: 1.3px;
 		margin-bottom: 24px;
+		&_about {
+			margin-bottom: 30px;
+		}
 	}
-	& > a {
+	&__link, &__button {
 		display: inline-block;
 		padding: 15px 26px;
+		border: none;
 		border-radius: 3px;
 		box-shadow: 0px 2px 0 0 rgba(101, 228, 125, 0.5);
 		background-image: linear-gradient(to top, #65e4ce, #65e4a1), 
@@ -153,6 +176,13 @@ p {
 		letter-spacing: 0.8px;
 		color: $white;
 		margin: 21px 0 22px;
+		&_author {
+			padding: 15px 29px;
+		}
+		&_about {
+			padding: 14px 44px;
+			margin: 24px 0;
+		}
 	}
 	& > small {
 		display: block;
@@ -161,6 +191,16 @@ p {
 		font-style: italic;
 		letter-spacing: 0.4px;
 		margin-left: -2px;
+	}
+	&_main {
+		color: $white;
+		padding: 3px 15px;
+		max-width: 585px;
+	}
+	&_author {
+		padding-top: 18px;
+		padding-left: 0px;
+		max-width: 585px;
 	}
 }
 .block-author {
@@ -206,6 +246,101 @@ p {
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
 			margin-bottom: 14px;
+		}
+	}
+}
+.block-about {
+	padding: 148px 0 231px;
+	flex-basis: 41%;
+    text-align: justify;
+	&-text {
+		flex-basis: 40%;
+	}
+	&-table {
+		flex-basis: 50%;
+		flex-basis: 49%;
+		padding-left: 4px;
+		box-sizing: border-box;
+		&__list {
+			counter-reset: list;
+			column-count: 2;
+			padding-top: 7px;
+			li {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 15px;
+				letter-spacing: 1.25px;
+				text-align: left;
+				color: #696980;
+				list-style-type: none;
+				position: relative;
+				padding-left: 35px;
+				/* padding-top: 3px; */
+				margin-bottom: 15px;
+				/* margin-right: 10px; */
+				/* overflow: hidden; */
+				&::before {
+					counter-increment: list 1;
+					content: counter(list) ". ";
+				}
+				&::after {
+					content: "+";
+					display: block;
+					position: absolute;
+					top: 0px;
+					left: 0;
+					padding: 3px 0px 0px 0px;
+					color: #fff;
+					background-image: linear-gradient(to top, #65e4ce, #65e4a1), 
+					                  linear-gradient(to bottom, #5189a0, #5189a0);
+					width: 22px;
+					height: 22px;
+					text-align: center;
+					box-sizing: border-box;
+					transform: translate(0px, -3px);
+				}
+			}
+		}
+	}
+}
+.block-flex {
+	display: flex;
+	justify-content: space-between;
+}
+.block-featured {
+	display: flex;
+	justify-content: flex-start;
+	p {
+		font-size: 18px;
+		font-weight: bold;
+		letter-spacing: 0.9px;
+		text-align: left;
+		color: $charcoal-grey;
+		padding-left: 2px;
+		display: inline-block;
+		margin-right: 24px;
+	}
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+		& li {
+			margin-right: 11px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__item {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		&_books {
+			background-image: url(../img/svg/sass.svg);
+		}
+		&_amazon {
+			background-image: url(../img/svg/amazon.svg);
+		}
+		&_sass {
+			background-image: url(../img/svg/sass.svg);
 		}
 	}
 }
