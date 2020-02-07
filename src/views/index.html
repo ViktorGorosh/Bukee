@@ -27,6 +27,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Roboto+Slab:100,400,700&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="../styles/main.css">
 
         <script src="https://kit.fontawesome.com/bb4fd98a6b.js" crossorigin="anonymous"></script>
@@ -85,7 +86,7 @@
                     </div>
                     <div class="ava">
                         <div class="ava__gradient">
-                            <img class="ava__picture" src="../img/author.jpg" alt="Author" width="438" height="466">
+                            <img class="ava__picture" src="../img/author.jpg" alt="Author">
                         </div>
                     </div>
                 </div>
@@ -101,7 +102,7 @@
                 <div class="about text">
                     <h2 class="text__title text__title_about">Book Contents</h2>
                     <p class="text__subtitle text__subtitle_about">Let’s see what we have covered in the book</p>
-                    <div class="flex">
+                    <div class="flex about-flex">
                         <div class="about-text">
                             <h3 class="text__paragraph-title">About the book</h3>
                             <p class="text__description text__description_about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu m dolore eu fugiat nulla pariatur.</p>
@@ -181,11 +182,50 @@
                 </div>
             </div>
         </div>
+        <div class="page page_review">
+            <div class="wrap wrap_review">
+                <div class="slick text review">
+                    <div>
+                        <div class="review__ava">
+                            <div class="review__thumb">
+                                <img src="../img/avatar_quote.jpg" alt="Avatar">
+                            </div>
+                            <div class="review__quotes"></div>
+                        </div>
+                        <h3 class="text__paragraph-title">Kate Dennings</h3>
+                        <p class="text__description">Calligraphy Expert</p>
+                        <p class="text__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                    <div>
+                        <div class="review__ava">
+                            <div class="review__thumb">
+                                <img src="../img/avatar_quote.jpg" alt="Avatar">
+                            </div>
+                            <div class="review__quotes"></div>
+                        </div>
+                        <h3 class="text__paragraph-title">Kate Dennings</h3>
+                        <p class="text__description">Calligraphy Expert</p>
+                        <p class="text__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                    <div>
+                        <div class="review__ava">
+                            <div class="review__thumb">
+                                <img src="../img/avatar_quote.jpg" alt="Avatar">
+                            </div>
+                            <div class="review__quotes"></div>
+                        </div>
+                        <h3 class="text__paragraph-title">Kate Dennings</h3>
+                        <p class="text__description">Calligraphy Expert</p>
+                        <p class="text__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="page page_events">
             <div class="wrap events">
                 <div class="ava">
                     <div class="ava__gradient">
-                        <img class="ava__picture" src="../img/author_events.jpg" alt="Author" width="440" height="606">
+                        <img class="ava__picture" src="../img/author_events.jpg" alt="Author">
                     </div>
                 </div>
                 <div class="text">
@@ -307,6 +347,16 @@
                 </div>
             </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+              $('.slick').slick({
+                dots: true,
+                arrows: false
+              });
+            });
+        </script>
         <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>
     </body>
